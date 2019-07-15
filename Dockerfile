@@ -17,6 +17,8 @@ RUN apt-get -qqy update \
     pulseaudio \
     dbus \
     dbus-x11 \
+    default-jre \
+    chromium-browser \
     build-essential && \
     rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
