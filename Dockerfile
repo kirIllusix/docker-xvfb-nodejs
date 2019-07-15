@@ -24,3 +24,7 @@ RUN apt-get -qqy update \
 # INSTALL AND CONFIGURE
 #
 COPY docker-entrypoint.sh /opt/docker-entrypoint.sh
+RUN chmod u+rx,g+rx,o+rx,a-w /opt/docker-entrypoint.sh
+
+ENTRYPOINT ["/opt/docker-entrypoint.sh"]
+CMD ["node", "--version"]
